@@ -135,10 +135,10 @@ module Radiant
       def load_rubygems
         require 'rubygems'
 
-        unless rubygems_version >= '0.9.4'
-          $stderr.puts %(Radiant requires RubyGems >= 0.9.4 (you have #{rubygems_version}). Please `gem update --system` and try again.)
-          exit 1
-        end
+        #unless rubygems_version >= '0.9.4'
+        #  $stderr.puts %(Radiant requires RubyGems >= 0.9.4 (you have #{rubygems_version}). Please `gem update --system` and try again.)
+        #  exit 1
+        #end
 
       rescue LoadError
         $stderr.puts %(Radiant requires RubyGems >= 0.9.4. Please install RubyGems and try again: http://rubygems.rubyforge.org)

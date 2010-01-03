@@ -1,0 +1,3 @@
+[submodule "vendor/extensions/code_ray"]
+	path = vendor/extensions/code_ray
+	url = git://github.com/phallstrom/code_ray.git
