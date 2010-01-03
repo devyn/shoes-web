@@ -14,5 +14,12 @@ class DisableHerokuCachingExtension < Radiant::Extension
   
   def activate
     # admin.nav[:content] << admin.nav_item(:disable_heroku_caching, "Disable Heroku Caching", "/admin/disable_heroku_caching"), :after => :pages
+    ApplicationController.class_eval {
+      after_filter :set_cacher_control_header
+      private
+      def set_cache_control_header
+        headers['Cache-Control'] = 'no-cache'
+      end
+    }
   end
 end
