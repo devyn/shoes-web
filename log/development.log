@@ -1,1 +1,4 @@
-# Logfile created on 2010-01-03 11:27:01 -0800
+# Logfile created on 2010-01-03 11:27:01 -0800  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
