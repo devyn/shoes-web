@@ -1,2 +1,3 @@
 radiant -v ">= 0.8.1"
-coderay
+coderay -v ">= 0.9.1"
+redcloth -v ">= 4.2.2"
