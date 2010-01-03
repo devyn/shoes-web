@@ -1,0 +1,53 @@
+= Code Ray
+
+The extension adds the new <r:code [language]></r:code> tag to Radiant that
+converts source code in multiple languages to HTML.  It is based on the Syntax
+Highlighting plugin by Marco Otte-Witte, but uses the CodeRay ruby gem instead
+of Python's Pygments.
+
+== Installation
+
+- Install CodeRay
+
+  sudo gem install coderay
+
+- Get the extension
+
+From your radiant project's path, do
+
+  git clone git://github.com/phallstrom/code_ray.git vendor/extensions/code_ray
+
+- Run the installation script
+
+  RAILS_ENV=production rake radiant:extensions:code_ray:update
+
+- Include stylesheets
+
+The coderay.css stylesheet is automatically copied to your public/stylesheets directory. 
+All you need to do is to include it in your layout.
+
+== Usage
+
+To add highlighted code to a page, use the <r:code [language] [line_numbers] [textile]> tag like so:
+
+  <r:code language="ruby" line_numbers="true">
+  class Foo
+  
+    def bar
+      puts 'foo bar'
+    end
+  
+  end
+  </r:code>
+
+Note: If you are using Textile be sure to add <notexttile>...</notextile> tags around the <r:code /> call or
+pass the textile="true" attribute.
+
+== Author
+
+Copyright (c) 2008 Philip Hallstrom (http://pjkh.com), released under the MIT license
+
+== Acknowledgements
+
+The actual highlighting is done by CodeRay (http://coderay.rubychan.de/).
+Inspired by Marco Otte-Witte's (http://simplabs.com) Syntax Highlighting extension (http://github.com/marcoow/syntax_highlighting).
