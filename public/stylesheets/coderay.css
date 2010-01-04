@@ -30,8 +30,6 @@ ol.CodeRay li { white-space: pre }
 
 .CodeRay .debug { color:white ! important; background:blue ! important; }
 
-.CodeRay br { display:none }
-
 .CodeRay .af { color:#00C }
 .CodeRay .an { color:#007 }
 .CodeRay .at { color:#f08 }
